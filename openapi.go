@@ -338,6 +338,10 @@ func protoComplex(i *Items, typ, msgName, name string, defs map[string]*Items, i
 				itemType, _ = refType(i.AdditionalProperties.Ref, defs)
 			case i.AdditionalProperties.Type != nil:
 				itemType = i.AdditionalProperties.Type.(string)
+				// proto
+				if itemType == "boolean" {
+					itemType = "bool"
+				}
 			}
 			return fmt.Sprintf("map<string, %s> %s = %d", itemType, name, *index)
 		}

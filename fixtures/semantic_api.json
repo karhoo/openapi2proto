@@ -524,7 +524,14 @@
                     "type": "string"
                 },
                 "x-proto-tag": 12
-            }
+            },
+            "test_map_scalar_bool": {
+              "type": "object",
+              "additionalProperties": {
+                  "type": "boolean"
+              },
+              "x-proto-tag": 13
+          }
         }
     }
   },

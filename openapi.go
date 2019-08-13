@@ -346,13 +346,13 @@ func protoComplex(i *Items, typ, msgName, name string, defs map[string]*Items, i
 					if i.AdditionalProperties.Format != nil {
 						itemFormat := i.AdditionalProperties.Format.(string)
 						if itemFormat == "float" {
-							itemType = "float"
+							itemType = "float32"
 						}
 						if itemFormat == "double" {
-							itemType = "double"
+							itemType = "float64"
 						}
 					} else {
-						itemType = "double"
+						itemType = "float64"
 					}
 				}
 			}

@@ -210,6 +210,9 @@ message TestModel {
     google.protobuf.Any test_float_value = 7;
     map<string, TestModel> test_map_object = 11;
     map<string, string> test_map_scalar = 12;
+    map<string, bool> test_map_scalar_bool = 13;
+    map<string, float32> test_map_scalar_float32 = 14;
+    map<string, float64> test_map_scalar_float64 = 15;
     google.protobuf.DoubleValue test_num_value = 5;
     google.protobuf.DoubleValue test_numer_value = 6;
     google.protobuf.StringValue test_string_value = 8;

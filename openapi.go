@@ -342,6 +342,15 @@ func protoComplex(i *Items, typ, msgName, name string, defs map[string]*Items, i
 				if itemType == "boolean" {
 					itemType = "bool"
 				}
+				if itemType == "number" {
+					itemFormat := i.AdditionalProperties.Format.(string)
+					if itemFormat == "double" {
+						itemType = "float64"
+					}
+					if itemFormat == "float" {
+						itemType = "float32"
+					}
+				}
 			}
 			return fmt.Sprintf("map<string, %s> %s = %d", itemType, name, *index)
 		}

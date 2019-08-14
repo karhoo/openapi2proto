@@ -531,9 +531,32 @@
                   "type": "boolean"
               },
               "x-proto-tag": 13
-          }
-        }
-    }
+            },
+            "test_map_scalar_float": {
+              "type": "object",
+              "additionalProperties": {
+                  "type": "number",
+                  "format": "float"
+              },
+              "x-proto-tag": 14
+            },
+            "test_map_scalar_double": {
+              "type": "object",
+              "additionalProperties": {
+                  "type": "number",
+                  "format": "double"
+              },
+              "x-proto-tag": 15
+            },
+            "test_map_scalar_double_none": {
+              "type": "object",
+              "additionalProperties": {
+                  "type": "number"
+              },
+              "x-proto-tag": 16
+            }
+         }
+      }
   },
   "securityDefinitions": {
       "apikey": {
